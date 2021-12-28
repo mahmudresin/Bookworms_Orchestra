@@ -1,309 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .body{
-            
-position: relative;
-width: 1440px;
-height: 1024px;
-
-background: #F6F8FA;
-        }
-        .image{
-            position: absolute;
-width: 182px;
-height: 182px;
-left: 111px;
-top: 135px;
-
-
-        }
-        .bioInfo{
-            /* Name */
-
-
-position: absolute;
-width: 55px;
-height: 22px;
-left: 387px;
-top: 169px;
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 22px;
-/* identical to box height */
-
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: -0.015em;
-
-color: #000000;
-
-
-
-/* Bio */
-
-
-position: absolute;
-width: 30px;
-height: 22px;
-left: 387px;
-top: 213px;
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 22px;
-/* identical to box height */
-
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: -0.015em;
-
-color: #000000;
-
-
-
-/* Ranking as a Reader */
-
-
-position: absolute;
-width: 183px;
-height: 22px;
-left: 387px;
-top: 269px;
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 22px;
-/* identical to box height */
-
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: -0.015em;
-
-color: #000000;
-        }
-        .yearinbooks{
-            /* User’s Year In Books */
-
-
-position: absolute;
-width: 179px;
-height: 22px;
-left: 974px;
-top: 152px;
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 22px;
-/* identical to box height */
-
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: -0.015em;
-
-color: #000000;
-        }
-        .usersfriends{
-            /* User’s Freinds */
-
-
-position: absolute;
-width: 125px;
-height: 22px;
-left: 974px;
-top: 317px;
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 22px;
-/* identical to box height */
-
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: -0.015em;
-
-color: #000000;
-
-        }
-        .bookshelves{
-            /* User’s Bookshelves */
-
-
-position: absolute;
-width: 170px;
-height: 22px;
-left: 107px;
-top: 387px;
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 22px;
-/* identical to box height */
-
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: -0.015em;
-
-color: #000000;
-
-        }
-        .updates{
-            /* User’s Recent Updates */
-
-
-position: absolute;
-width: 202px;
-height: 22px;
-left: 107px;
-top: 475px;
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 22px;
-/* identical to box height */
-
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: -0.015em;
-
-color: #000000;
-
-        }
-        .favauthors{
-            /* User’s Favourite Authors */
-
-
-position: absolute;
-width: 217px;
-height: 22px;
-left: 974px;
-top: 451px;
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 22px;
-/* identical to box height */
-
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: -0.015em;
-
-color: #000000;
-
-        }
-        .favgenres{
-            /* Favourite Genres */
-
-
-position: absolute;
-width: 151px;
-height: 22px;
-left: 974px;
-top: 616px;
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 22px;
-/* identical to box height */
-
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: -0.015em;
-
-color: #000000;
-
-        }
-        .quotes{
-            /* User’s Quotes */
-
-
-position: absolute;
-width: 123px;
-height: 22px;
-left: 107px;
-top: 754px;
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 22px;
-/* identical to box height */
-
-display: flex;
-align-items: center;
-text-align: center;
-letter-spacing: -0.015em;
-
-color: #000000;
-
-        }
-    </style>
-</head>
-<body>
-    <div class = "body">
-        <div class = "image">
-    <img src = " " alt = "profile pic">
-</div>
-<div class = "bioInfo">
-    <p>Name</p>
-    <p>Bio</p>
-    <p>Ranking as a Reader</p>
-</div>
-<div class = "yearinbooks">
-    <p>User's Year In Books</p>
-</div>
-<div class = "usersfriends">
-    <p>User's Friends</p>
-</div>
-<div class = "bookshelves">
-    <p>User's Bookshelves</p>
-</div>
-<div class = "updates">
-    <p>User's Recent Updates</p>
-</div>
-<div class = "favauthors">
-    <p>User's Favourite Authors</p>
-</div>
-<div class = "favgenres">
-    <p>Favourite Genres</p>
-</div>
-<div class = "quotes">
-    <p>User's Quotes</p>
-</div>
-</div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="Stylesheet" href="userstyle.css" />
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="body">
+      <nav>
+        <p class="nav"></p>
+        <img class="logo" src="logobw.jpg" alt="logo" />
+        <p class="webname">Bookworm's Orchestra</p>
+        <input class="searchbox" type="text" placeholder="Search Books" />
+        <p class="notification1">
+          <span
+            class="iconify"
+            data-icon="clarity:notification-line"
+            style="color: #3763ac"
+          ></span>
+        </p>
+        <img class="sidepro" src="profileimage.png" alt="pro" />
+      </nav>
+
+      <img class="image" src="profileimage.png" alt="profile pic" />
+
+      <p class="bioInfo1">Name</p>
+      <p class="bioInfo2">Bio</p>
+      <p class="bioInfo3">Ranking as a Reader</p>
+
+      <div class="yearinbooks">
+        <p>User's Year In Books</p>
+      </div>
+      <div class="usersfriends">
+        <p>User's Friends</p>
+      </div>
+      <div class="bookshelves">
+        <p>User's Bookshelves</p>
+      </div>
+      <div class="updates">
+        <p>User's Recent Updates</p>
+      </div>
+      <div class="favauthors">
+        <p>User's Favourite Authors</p>
+      </div>
+      <div class="favgenres">
+        <p>Favourite Genres</p>
+      </div>
+      <div class="quotes">
+        <p>User's Quotes</p>
+      </div>
+    </div>
+  </body>
 </html>

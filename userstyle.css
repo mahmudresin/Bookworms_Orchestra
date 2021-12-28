@@ -1,0 +1,317 @@
+.body {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+
+  background: #f6f8fa;
+}
+.nav {
+  /* Navigation C */
+
+  position: absolute;
+  width: 1450px;
+  height: 60px;
+  left: 0px;
+  top: 17px;
+
+  background: #ffffff;
+}
+.logo {
+  position: absolute;
+  width: 63px;
+  height: 57px;
+  left: 27px;
+  top: 14px;
+}
+.webname {
+  /* Bookworm’s Orchestra */
+
+  position: absolute;
+  width: 267px;
+  height: 72px;
+  left: 102px;
+  top: -12px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 72px;
+  /* identical to box height, or 300% */
+
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  color: #3763ac;
+}
+.searchbox {
+  position: absolute;
+  width: 250px;
+  height: 40px;
+  left: 997px;
+  top: 10px;
+}
+.notification1 {
+  /* Vector */
+
+  position: absolute;
+  height: 29.165000915527344px;
+  width: 30.0069580078125px;
+  left: 1280.83349609375px;
+  top: 15px;
+  border-radius: 0px;
+
+  background: #3763ac;
+}
+.sidepro {
+  /* Ellipse 1 */
+
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 1344px;
+  top: 26px;
+
+  background: url(profileimage.png);
+  border: 1px solid #3763ac;
+  box-sizing: border-box;
+}
+.image {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 111px;
+  top: 135px;
+}
+.bioInfo1 {
+  /* Name */
+
+  position: absolute;
+  width: 55px;
+  height: 22px;
+  left: 329px;
+  top: 163px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  color: #3763ac;
+}
+
+/* Bio */
+
+.bioInfo2 {
+  position: absolute;
+  width: 30px;
+  height: 22px;
+  left: 329px;
+  top: 207px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  color: #3763ac;
+}
+
+.bioInfo3 {
+  /* Ranking as a Reader */
+
+  position: absolute;
+  width: 183px;
+  height: 22px;
+  left: 329px;
+  top: 263px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  color: #3763ac;
+}
+.yearinbooks {
+  /* User’s Year In Books */
+
+  position: absolute;
+  width: 179px;
+  height: 22px;
+  left: 974px;
+  top: 152px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  color: #3763ac;
+}
+.usersfriends {
+  /* User’s Freinds */
+
+  position: absolute;
+  width: 125px;
+  height: 22px;
+  left: 974px;
+  top: 317px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  color: #3763ac;
+}
+.bookshelves {
+  /* User’s Bookshelves */
+
+  position: absolute;
+  width: 170px;
+  height: 22px;
+  left: 107px;
+  top: 387px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  color: #3763ac;
+}
+.updates {
+  /* User’s Recent Updates */
+
+  position: absolute;
+  width: 202px;
+  height: 22px;
+  left: 107px;
+  top: 475px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  color: #3763ac;
+}
+.favauthors {
+  /* User’s Favourite Authors */
+
+  position: absolute;
+  width: 217px;
+  height: 22px;
+  left: 974px;
+  top: 451px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  color: #3763ac;
+}
+.favgenres {
+  /* Favourite Genres */
+
+  position: absolute;
+  width: 151px;
+  height: 22px;
+  left: 974px;
+  top: 616px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  color: #3763ac;
+}
+.quotes {
+  /* User’s Quotes */
+
+  position: absolute;
+  width: 123px;
+  height: 22px;
+  left: 107px;
+  top: 754px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  color: #3763ac;
+}
