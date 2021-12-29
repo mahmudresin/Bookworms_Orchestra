@@ -12,12 +12,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="body">
-      <nav>
+    
+      <header>
         <p class="nav"></p>
         <img class="logo" src="logobw.jpg" alt="logo" />
         <p class="webname">Bookworm's Orchestra</p>
+      </header>
+        <nav>
+          <form action = "backend-search.php" method = "post">
         <input class="searchbox" type="text" placeholder="Search Books" />
+      </form>
+      
         <p class="notification1">
           <span
             class="iconify"
@@ -27,7 +32,8 @@
         </p>
         <img class="sidepro" src="profileimage.png" alt="pro" />
       </nav>
-
+      <!-- <div class="body"> -->
+        <main>
       <img class="image" src="profileimage.png" alt="profile pic" />
 
       <p class="bioInfo1">Name</p>
@@ -55,6 +61,7 @@
       <div class="quotes">
         <p>User's Quotes</p>
       </div>
-    </div>
+    </main>
+    <!-- </div> -->
   </body>
 </html>

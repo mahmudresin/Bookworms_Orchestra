@@ -1,76 +1,69 @@
+<?php
+ 
+include("backend-search.php")
+?>
+ 
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>PHP Live MySQL Database Search</title>
-<style>
-    body{
-        font-family: Arail, sans-serif;
-    }
-    /* Formatting search box */
-    .search-box{
-        width: 300px;
-        position: relative;
-        display: inline-block;
-        font-size: 14px;
-    }
-    .search-box input[type="text"]{
-        height: 32px;
-        padding: 5px 10px;
-        border: 1px solid #CCCCCC;
-        font-size: 14px;
-    }
-    .result{
-        position: absolute;        
-        z-index: 999;
-        top: 100%;
-        left: 0;
-    }
-    .search-box input[type="text"], .result{
-        width: 100%;
-        box-sizing: border-box;
-    }
-    /* Formatting result items */
-    .result p{
-        margin: 0;
-        padding: 7px 10px;
-        border: 1px solid #CCCCCC;
-        border-top: none;
-        cursor: pointer;
-    }
-    .result p:hover{
-        background: #f2f2f2;
-    }
-</style>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script>
-$(document).ready(function(){
-    $('.search-box input[type="text"]').on("keyup input", function(){
-        /* Get input value on change */
-        var inputVal = $(this).val();
-        var resultDropdown = $(this).siblings(".result");
-        if(inputVal.length){
-            $.get("backend-search.php", {term: inputVal}).done(function(data){
-                // Display the returned data in browser
-                resultDropdown.html(data);
-            });
-        } else{
-            resultDropdown.empty();
-        }
-    });
-    
-    // Set search input value on click of result item
-    $(document).on("click", ".result p", function(){
-        $(this).parents(".search-box").find('input[type="text"]').val($(this).text());
-        $(this).parent(".result").empty();
-    });
-});
-</script>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="search-box">
-        <input type="text" autocomplete="off" placeholder="Search country..." />
-        <div class="result"></div>
+<div class="container mt-4">
+  <h6 className="text-center text-success mt-5"><b>Search Books</b></h6>
+    <div class="input-group mb-4 mt-3">
+     <div class="form-outline">
+        <input type="text" id="getBookName"/>
     </div>
+  </div>                   
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Book ID</th>
+        <th>Book Title</th>
+        <th>Publish Year</th>
+        <th>Book Cover</th>
+      </tr>
+    </thead>
+    <tbody id="showSingleBook">
+      <?php  
+            $sql = "SELECT * FROM book";
+            $query = mysqli_query($conn,$sql);
+            while($row = mysqli_fetch_assoc($query))
+            {
+              echo"<tr>";
+               echo"<td><h6>".$row['book_id']."</h6></td>";
+               echo"<td><h6>".$row['book_title']."</h6></td>";
+               echo"<td>".$row['copyright_year']."</td>";
+            //    echo"<td><img src='images/".$row['image_path']."' style='height:30px;' ></td>";  
+              echo"</tr>";   
+            }
+        ?>
+    </tbody>
+  </table>
+</div>
 </body>
 </html>
+<script>
+  $(document).ready(function(){
+   $('#getBookName').on("keyup", function(){
+     var getBookName = $(this).val();
+     $.ajax({
+       method:'POST',
+       url:'searchBook.php',
+       data:{book_title:getBookName},
+       success:function(response)
+       {
+            $("#showSingleBook").html(response);
+       } 
+     });
+   });
+  });
+</script>

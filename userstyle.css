@@ -1,10 +1,18 @@
-.body {
+body {
+  background-color: #f6f8fa;
+}
+header {
+  background: #ffffff;
+  height: 60px;
+  width: 1440px;
+}
+/* .body {
   position: relative;
   width: 1440px;
   height: 1024px;
 
   background: #f6f8fa;
-}
+} */
 .nav {
   /* Navigation C */
 
@@ -75,6 +83,9 @@
   background: url(profileimage.png);
   border: 1px solid #3763ac;
   box-sizing: border-box;
+}
+main {
+  background: #f6f8fa;
 }
 .image {
   position: absolute;
