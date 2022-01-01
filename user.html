@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
     <link rel="Stylesheet" href="userstyle.css" />
-    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -14,24 +14,16 @@
   <body>
     
       <header>
-        <p class="nav"></p>
+        
         <img class="logo" src="logobw.jpg" alt="logo" />
         <p class="webname">Bookworm's Orchestra</p>
-      </header>
-        <nav>
-          <form action = "backend-search.php" method = "post">
-        <input class="searchbox" type="text" placeholder="Search Books" />
-      </form>
+        <a href = "search-form.php" >Search Books</a>
       
-        <p class="notification1">
-          <span
-            class="iconify"
-            data-icon="clarity:notification-line"
-            style="color: #3763ac"
-          ></span>
-        </p>
+      
+        
         <img class="sidepro" src="profileimage.png" alt="pro" />
-      </nav>
+      </header>
+        
       <!-- <div class="body"> -->
         <main>
       <img class="image" src="profileimage.png" alt="profile pic" />
@@ -49,18 +41,25 @@
       <div class="bookshelves">
         <p>User's Bookshelves</p>
       </div>
-      <div class="updates">
-        <p>User's Recent Updates</p>
-      </div>
-      <div class="favauthors">
-        <p>User's Favourite Authors</p>
-      </div>
-      <div class="favgenres">
-        <p>Favourite Genres</p>
-      </div>
-      <div class="quotes">
-        <p>User's Quotes</p>
-      </div>
+      
+        <p class="updates">User's Recent Updates</p>
+        
+      
+      
+        <p class="favauthors">User's Favourite Authors</p>
+      
+      
+        <p class="favgenres">Favourite Genres</p>
+      
+      
+        <p class="quotes">User's Quotes</p>
+        
+          <form action = "post.php" method = "post">
+            
+            <input class="postbox" type="text" placeholder="What's on your mind?" />
+          </form>
+        
+      
     </main>
     <!-- </div> -->
   </body>

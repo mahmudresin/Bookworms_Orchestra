@@ -1,5 +1,7 @@
 body {
   background-color: #f6f8fa;
+  width: 1440px;
+  height: 1200px;
 }
 header {
   background: #ffffff;
@@ -13,17 +15,17 @@ header {
 
   background: #f6f8fa;
 } */
-.nav {
+/* nav {
   /* Navigation C */
 
-  position: absolute;
+/* position: absolute;
   width: 1450px;
   height: 60px;
   left: 0px;
   top: 17px;
 
   background: #ffffff;
-}
+} */
 .logo {
   position: absolute;
   width: 63px;
@@ -52,25 +54,34 @@ header {
 
   color: #3763ac;
 }
-.searchbox {
+a {
+  position: absolute;
+  width: 55px;
+  height: 22px;
+  left: 102px;
+  top: -13px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  color: #3763ac;
+}
+/* .searchbox {
   position: absolute;
   width: 250px;
   height: 40px;
   left: 997px;
   top: 10px;
-}
-.notification1 {
-  /* Vector */
+} */
 
-  position: absolute;
-  height: 29.165000915527344px;
-  width: 30.0069580078125px;
-  left: 1280.83349609375px;
-  top: 15px;
-  border-radius: 0px;
-
-  background: #3763ac;
-}
 .sidepro {
   /* Ellipse 1 */
 
@@ -257,6 +268,7 @@ main {
 
   color: #3763ac;
 }
+
 .favauthors {
   /* User’s Favourite Authors */
 
@@ -311,6 +323,27 @@ main {
   height: 22px;
   left: 107px;
   top: 754px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.015em;
+
+  color: #3763ac;
+}
+.postbox {
+  /* User’s Quotes */
+
+  position: absolute;
+  margin-top: 100px;
+  margin-bottom: 100px;
 
   font-family: Montserrat;
   font-style: normal;
