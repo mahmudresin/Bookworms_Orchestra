@@ -12,11 +12,12 @@
 		<div class="container">
 			<div id="menu">
 			<ul class="nav">
-				<li><a href="Main-Page.html">Welcome</a></li>
-				<li><a href="Search.php">Search</a></li>
-				<li><a href="Review.php">Review</a></li>
-				<li><a href="Register.php">Register</a></li>
-				<li><a href="Login.php">My Account</a></li>
+                            <li><a href="Main-Page.html">Welcome</a></li>
+							<li><a href="Search.php">Search</a></li>
+							<li><a href="Reviews.php">Review</a></li>
+							<li><a href="Register.php">Register</a></li>
+							<li><a href="Login.php">My Account</a></li>
+							<li><a href="Challenges.php">Challenges</a></li>
 			</ul>
 			</div>
 		</div>
@@ -41,16 +42,6 @@
 			session_start();
 		}
 			
-        if(isset($_SESSION['Username'])) 
-		{
-			echo "<br>";
-			echo "<div class='Form2'><h2>You're already logged in, log out if you wish to make a new account.</h2></div>";
-			echo "<br>";
-			echo "<div class='Form'><h3><a href='Login.php'>View your account and Continue</a> <br></h3></div>";
-			echo "<div class='Form'><h3><a href='LoggedOut.php'>Want to log out?</a> <br></h3></div>";
-			echo "<br><br>";
-			goto includeFooter;
-		}
 		
 
         if(isset($_REQUEST['Username']))
@@ -64,22 +55,14 @@
 			$RePassword = mysqli_real_escape_string($Connection,$_REQUEST["RePassword"]);
 
 			
-			$Email = mysqli_real_escape_string($Connection,$_REQUEST["Email"]);
+			$NumberOfBooks = mysqli_real_escape_string($Connection,$_REQUEST["NumberOfBooks"]);
 			
 
-			$FirstName = mysqli_real_escape_string($Connection,$_REQUEST["FirstName"]);
+			$Weekly = mysqli_real_escape_string($Connection,$_REQUEST["Weekly"]);
 
 
-			$Surname = mysqli_real_escape_string($Connection,$_REQUEST["Surname"]);
+			$Monthly = mysqli_real_escape_string($Connection,$_REQUEST["Monthly"]);
 			
-
-			$AddressLine1 = mysqli_real_escape_string($Connection,$_REQUEST["AddressLine1"]);
-			
-			
-			$City = mysqli_real_escape_string($Connection,$_REQUEST["City"]);
-			
-	
-			$Mobile = mysqli_real_escape_string($Connection,$_REQUEST["Mobile"]);
 			
 			if ($Password != $RePassword) 
 			{
@@ -88,20 +71,35 @@
 				goto SkipBackToForm;
 			
 			}
+
+            if (!$Weekly=="NO" || !$Weekly == "YES" ) 
+			{
+				echo "<div class='Form'><h3>Your weekly input doesn't match. Try Again</h3><br/></div>";
+			 
+				goto SkipBackToForm;
+			
+			}
+
+            if (!$Monthly=="NO" || !$Monthly == "YES" ) 
+			{
+				echo "<div class='Form'><h3>Your monthly input doesn't match. Try Again</h3><br/></div>";
+			 
+				goto SkipBackToForm;
+			
+			}
 			
 		
-			if (!is_numeric($Mobile) )
+			if (!is_numeric($NumberOfBooks) )
 			{
-				echo "<div class='Form'><h3>Your Mobile must be numeric, it must only contain valid numbers.</h3><br/></div>";
+				echo "<div class='Form'><h3>This must be numeric, it must only contain valid numbers.</h3><br/></div>";
 				
 				goto SkipBackToForm;
 			}
 			
 			
 			
-	        $Query = "INSERT INTO UsersTable (Username, Password, Email, FirstName, SurName,  Addressline1,  City,  Mobile) 
-					   VALUES ('$Username', '$Password','$Email', '$FirstName','$Surname', 
-							   '$AddressLine1', '$City',  '$Mobile')";
+	        $Query = "INSERT INTO Challenges (Username, Password, NumberOfBooks, Weekly, Monthly) 
+					   VALUES ('$Username', '$Password','$NumberOfBooks', '$Weekly','$Monthly')";
 		
 		
 	        $Result = mysqli_query($Connection,$Query);
@@ -109,7 +107,7 @@
 			{
 				echo "<br>";
 				
-	            echo "<div class='Form'><h3>You have registered, please log in.</h3><br/>Click here to <a href='Login.php'>Login</a></div>";
+	            echo "<div class='Form'><h3>Challenges Recorded.</h3><br/>Click here to <a href='Main-Page.html'>Main Page</a></div>";
 	
 				echo "<br><br>";
 				
@@ -137,18 +135,20 @@
 				<input type="text" name="Username" placeholder="Username" required />
 				<input type="password" name="Password" placeholder="Password" required />
 				<input type="password" name="RePassword" placeholder="Confirm Your Password" required />
-				<input type="text" name="Books" placeholder="Number of Books you have read" required />
-                <input type="text" name="Email" placeholder="Number of Books you have read" required />
-				<input type="submit" name="Submit" value="Challenge" />
+				<input type="text" name="NumberOfBooks" placeholder="Number of Books you have read" required />
+                <input type="text" name="Weekly" placeholder="WEEKLY: YES/NO" required />
+                <input type="text" name="Monthly" placeholder="MONTHLY: YES/NO" required />
+				<input type="submit" name="Submit" value="Submit" />
 			</form>
 		</div>
 
-        <!--Start of footer-->
 	<?php includeFooter: ?>
 	<div class="clearfix"></div>
 	<div  class="footer">
 		<div class="container">
-			<p>Copyright. 2016 All rights reserved.</p>
+						<p>Contact with us if you find any difficulties.</p>
+						<p>Email: yeaminmahmudres@gmail.com </p>
+						<p>Email: syedaramimarafsana@gmail.com </p>
 		</div>
 	</div>
 </body>
