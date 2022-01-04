@@ -1,5 +1,5 @@
 <?php 
-$conn = mysqli_connect("localhost","root","","bookworm's orchestra");
+$conn = mysqli_connect("localhost","root","","db");
  
 // Check connection
 if (mysqli_connect_errno()) {
